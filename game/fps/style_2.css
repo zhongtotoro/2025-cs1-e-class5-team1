@@ -1,8 +1,12 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  background: #222;
+  color: #fff;
+}
+
+h2{
+  color: #fff;
 }
 
 .site-header,
@@ -22,7 +26,7 @@ body {
 }
 
 .game-card {
-  background: #fff;
+  background: #222;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -45,7 +49,7 @@ body {
 .game-card .release {
   margin: 0 .5rem .25rem;
   font-size: .9rem;
-  color: #666;
+  color: #fff;
 }
 
 .game-card .description {
@@ -67,4 +71,18 @@ body {
 
 .game-card a:hover {
   background: #005A9C;
+}
+
+.video-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.Call-of-duty{
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  object-fit:cover; 
 }
