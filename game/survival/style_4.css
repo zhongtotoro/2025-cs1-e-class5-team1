@@ -1,0 +1,33 @@
+/* 枠の背景色*/
+.recommend {
+    border: 2px solid #6b5f54;
+    background: #eceae6;
+    border-radius: 30px;
+    padding: 1em;
+    margin-right: 400px
+}
+
+/* 見出し */
+.recommend__header {
+    display: inline-flex;
+    align-items: center;
+    background: #7b7977;
+    color: #fff;
+    padding: 0.4em 0.8em;
+    border-radius: 1em;
+    margin-bottom: 0.8em;
+}
+
+
+
+/* テキスト */
+.recommend__title {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* 3. リスト */
+.recommend__list {
+    padding: 0;
+    margin: 0;
+}
