@@ -24,21 +24,54 @@
         </video>   
         </section>
         <p class="genre">バトルロイヤル</p>
-        <p class="release">2020年3月 配信開始</p>
+        <p class="release">2020年 3月 配信開始</p>
         <p class="description">
           「コール オブ デューティ」シリーズの無料バトルロイヤル。リアルな銃撃・乗り物要素が魅力。
         </p>
         <p class="description">
-          多彩な装備と戦術を駆使して敵を撃破し、頂点を目指そう！
+          多彩な装備と戦術を駆使して敵を撃破し、頂点を目指そう!
         </p>
         <a href="https://www.callofduty.com/warzone" target="_blank" rel="noopener">公式サイト</a>
       </article>
-      <!-- 他のカードも同様に -->
     </section>
+    <!--他のゲームも同様に-->
   </main>
-
+   <h2><strong>2. VALORANT</strong></h2>
+        <h2>公式トレーラー</h2>
+        <section class="video-section">
+          <iframe width="655" height="368" src="https://www.youtube.com/embed/TndKgys97LM" title="Episode 1: イグニッション // ゲームプレイトレーラー - VALORANT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           <!-- 非対応ブラウザ向け -->
+             <p>お使いのブラウザは video タグに対応していません。</p>
+        </video>   
+        </section>
+        <p class="genre">5対5のチームで戦闘</p>
+        <p class="release">2020年 6月 配信開始</p>
+        <p class="description">
+          5対5に分かれるチーム戦闘。毎ラウンド武器を買い、自分なりの戦い方で挑もう!
+        </p>
+        <p class="description">
+          多彩なエージェントでスキルを使い、自分なりの戦闘を見つけて勝利を目指そう!
+        </p>
+        <a href="https://playvalorant.com/ja-jp/" target="_blank" rel="noopener"></a>公式サイト</a>
+      </article>
+  <!--自分たちのサイトの表記-->
   <footer class="site-footer">
     <p>© 2025 自分のサイト名 / 画像は各公式ページの©表記に準拠</p>
   </footer>
+  <!-- スクロールでフェードイン -->
+   <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.game-card');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => io.observe(card));
+  });
+</script>
 </body>
 </html>
