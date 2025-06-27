@@ -1,20 +1,85 @@
-/*―――――  ■マップ全体のグリッド設定 ――――*/ 
-.map { 
-  display: grid; 
-  /* 好きな列数・行数に変えてください */ 
-  grid-template-columns: repeat(10, 16px); 
-  grid-template-rows:    repeat( 8, 16px); 
-  gap: 0; 
-} 
+:root {
+  --tile: 16px;
+  --cols: 20;   /* map.js と揃えてください */
+  --rows: 12;
+}
 
-/*――――■共通タイル設定 ――――*/ 
-.tile { 
-  width:  16px; 
-  height: 16px; 
-  background-image: url("../img/tiles.png"); 
-  background-repeat: no-repeat; 
-  /* X,Y の calc() の間には必ずスペースを入れる */ 
-  background-position: 
-    calc(var(--pos-x) -16px)   /*---x方向---*/
-    calc(var(--pos-y) -16px);  /*---y方向---*/
+body {
+  margin: 0;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* ■ マップ領域を Grid に */
+.map {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--tile));
+  grid-template-rows:    repeat(var(--rows), var(--tile));
+  position: relative;
+  margin: 0 auto;
+  width:  calc(var(--cols) * var(--tile));
+  height: calc(var(--rows) * var(--tile));
+  background: #070;  /* 見えない部分のバックアップ色 */
+}
+
+/* ■ すべてのタイル要素の共通設定 */
+.tile {
+  width:  var(--tile);
+  height: var(--tile);
+  background-image: url("../img/tiles.png");
+  background-repeat: no-repeat;
+}
+
+/* ■ 地面タイルのクラス */
+.grass { background-position:   0px   0px; }
+.dirt  { background-position: -16px   0px; }
+.stone { background-position: -32px   0px; }
+.path  { background-position: -16px -16px; }  /* 例 */
+
+/* ■ 家など複数マスにまたがるオブジェクトは .object と個別クラスを組み合わせ */
+.object {
+  background-repeat: no-repeat;
+}
+.house-red {
+  /* tiles.png 上で赤屋根の家の左上が (4,1)＝左から4列・上から1行目 */
+  background-position: calc(-4 * var(--tile)) calc(-1 * var(--tile));
+  grid-column:  4 / span 2;   /* map.js と揃えて4列目から２マス */
+  grid-row:     3 / span 2;   /* map.js と揃えて3行目から２マス */
+  width:  calc(2 * var(--tile));
+  height: calc(2 * var(--tile));
+}
+.house-blue {
+  background-position: calc(-4 * var(--tile)) calc(-4 * var(--tile));
+  grid-column: 11 / span 2;  /* 例: 11列目から2マス */
+  grid-row:     2 / span 2;  /* 例:  2行目から2マス */
+  width:  calc(2 * var(--tile));
+  height: calc(2 * var(--tile));
+}
+.castle {
+  background-position: calc(-8 * var(--tile)) calc(-2 * var(--tile));
+  grid-column: 14 / span 4;  /* 4×4マス */
+  grid-row:     6 / span 4;
+  width:  calc(4 * var(--tile));
+  height: calc(4 * var(--tile));
+}
+.tree {
+  background-position: calc(-3 * var(--tile)) calc(-2 * var(--tile));
+  grid-column:  3 / span 1;
+  grid-row:     5 / span 2;
+  width:  var(--tile);
+  height: calc(2 * var(--tile));
+}
+.fence {
+  background-position: calc(-7 * var(--tile)) calc(-3 * var(--tile));
+  grid-column: 18 / span 2;
+  grid-row:     8 / span 1;
+  width:  calc(2 * var(--tile));
+  height: var(--tile);
+}
+.character {
+  background-position: calc(-9 * var(--tile)) calc(-5 * var(--tile));
+  grid-column:  6 / span 1;
+  grid-row:     7 / span 1;
 }
