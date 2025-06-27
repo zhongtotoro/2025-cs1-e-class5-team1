@@ -1,0 +1,20 @@
+/*―――――  ■マップ全体のグリッド設定 ――――*/ 
+.map { 
+  display: grid; 
+  /* 好きな列数・行数に変えてください */ 
+  grid-template-columns: repeat(10, 16px); 
+  grid-template-rows:    repeat( 8, 16px); 
+  gap: 0; 
+} 
+
+/*――――■共通タイル設定 ――――*/ 
+.tile { 
+  width:  16px; 
+  height: 16px; 
+  background-image: url("../img/tiles.png"); 
+  background-repeat: no-repeat; 
+  /* X,Y の calc() の間には必ずスペースを入れる */ 
+  background-position: 
+    calc(var(--pos-x) -16px)   /*---x方向---*/
+    calc(var(--pos-y) -16px);  /*---y方向---*/
+}
