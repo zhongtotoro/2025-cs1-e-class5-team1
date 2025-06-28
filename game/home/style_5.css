@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(270deg, #1f1c2c, #928dab);
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
