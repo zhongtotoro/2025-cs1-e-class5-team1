@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="site-header">
-    <h1>おすすめFPSゲーム</h1>
+    <h1>おすすめFPSゲーム3選</h1>
   </header>
 
   <main>
@@ -18,27 +18,97 @@
         <h2><strong>1. Call of Duty: Warzone</strong></h2>
         <h2>公式トレーラー</h2>
         <section class="video-section">
-          <iframe src="https://www.youtube.com/embed/91jvCQ9IMZI?rel=0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="1393" height="784" src="https://www.youtube.com/embed/91jvCQ9IMZI" title="Call of Duty®: Warzone - トレーラー [JP]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
            <!-- 非対応ブラウザ向け -->
              <p>お使いのブラウザは video タグに対応していません。</p>
         </video>   
         </section>
         <p class="genre">バトルロイヤル</p>
-        <p class="release">2020年3月 配信開始</p>
+        <p class="release">2020年 3月 配信開始</p>
         <p class="description">
           「コール オブ デューティ」シリーズの無料バトルロイヤル。リアルな銃撃・乗り物要素が魅力。
         </p>
         <p class="description">
-          多彩な装備と戦術を駆使して敵を撃破し、頂点を目指そう！
+          多彩な装備と戦術を駆使して敵を撃破し、頂点を目指そう!
         </p>
         <a href="https://www.callofduty.com/warzone" target="_blank" rel="noopener">公式サイト</a>
       </article>
-      <!-- 他のカードも同様に -->
+    </section>
+  </main>
+  
+  <main>
+    <section class="game-grid">
+      
+      <article class="game-card">
+        <h2><strong>2. VALORANT</strong></h2>
+        <h2>公式トレーラー</h2>
+        <section class="video-section">
+           <iframe width="655" height="368" src="https://www.youtube.com/embed/TndKgys97LM" title="Episode 1: イグニッション // ゲームプレイトレーラー - VALORANT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           <!-- 非対応ブラウザ向け -->
+             <p>お使いのブラウザは video タグに対応していません。</p>
+        </video>   
+        </section>
+        <p class="genre">5対5のチーム戦闘</p>
+        <p class="release">2020年 6月 配信開始</p>
+        <p class="description">
+          多彩なエージェントのアビリティと精密なエイムが勝敗を左右する5対5の戦略的タクティカルFPS。
+        </p>
+        <p class="description">
+          多彩なエージェントでスキルを使い、自分なりの戦闘を見つけて勝利を目指す
+        </p>
+        <a href="https://playvalorant.com/ja-jp/" target="_blank" rel="noopener">公式サイト</a>
+      </article>
     </section>
   </main>
 
+  <main>
+    <section class="game-grid">
+      
+      <article class="game-card">
+        <h2><strong>3. Apex Legends</strong></h2>
+        <h2>公式トレーラー</h2>
+        <section class="video-section">
+           <iframe width="655" height="368" src="https://www.youtube.com/embed/hg0_PBw1OMI" title="エーペックスレジェンズ: プロディジー ゲームプレイトレーラー" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           <!-- 非対応ブラウザ向け -->
+             <p>お使いのブラウザは video タグに対応していません。</p>
+        </video>   
+        </section>
+        <p class="genre">バトルロイヤル</p>
+        <p class="release">2019年 2月 配信開始</p>
+        <p class="description">
+          個性豊かなレジェンドを操作し、3人1組のチームで最後の生存をかけた戦略的バトルロイヤルを繰り広げる。
+        </p>
+        <p class="description">
+           高速移動や多彩なアビリティで刻々と形勢が変わる、緊張感あふれる無料プレイのチームアクションゲーム。
+        </p>
+        <a href="https://www.ea.com/ja/games/apex-legends/apex-legends" target="_blank" rel="noopener">公式サイト</a>
+      </article>
+    </section>
+  </main>
+  <!--他のゲームも同様に-->
+    
+
+
+
+  
+  <!--自分たちのサイトの表記-->
   <footer class="site-footer">
     <p>© 2025 自分のサイト名 / 画像は各公式ページの©表記に準拠</p>
   </footer>
+  <!-- スクロールでフェードイン -->
+   <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.game-card');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => io.observe(card));
+  });
+</script>
 </body>
 </html>
