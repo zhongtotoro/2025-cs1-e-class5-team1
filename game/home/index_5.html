@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Let's Start</title>
   <link rel="stylesheet" href="style_5.css">
 </head>
 <body>
-  <h1>Let's start!</h1>
+  <!-- スタート画面 -->
+  <div id="start-screen">
+    <h1 id="start-text">Let's start!</h1>
+  </div>
+
+  <!-- ジャンル選択画面 -->
+  <div id="genre-screen" class="hidden">
+    <h2>どのジャンルが気になりますか？</h2>
+    <div class="card-list">
+
+      <div class="card" data-target="../card/index_1.html">
+        <div class="icon" style="background: linear-gradient(135deg, #FF9A9E, #FECFEF);">
+          <span>🎴</span>
+        </div>
+        <div class="card-text">カードゲーム</div>
+        <div class="arrow">▶</div>
+      </div>
+
+      <div class="card" data-target="../fps/index_2.html">
+        <div class="icon" style="background: linear-gradient(135deg, #43CEA2, #185A9D);">
+          <span>🔫</span>
+        </div>
+        <div class="card-text">FPS</div>
+        <div class="arrow">▶</div>
+      </div>
+
+      <div class="card" data-target="../horror/index_3.html">
+        <div class="icon" style="background: linear-gradient(135deg, #667EEA, #764BA2);">
+          <span>👻</span>
+        </div>
+        <div class="card-text">ホラーゲーム</div>
+        <div class="arrow">▶</div>
+      </div>
+
+      <div class="card" data-target="../RPG/index_4.html">
+        <div class="icon" style="background: linear-gradient(135deg, #F7971E, #FFD200);">
+          <span>🧝</span>
+        </div>
+        <div class="card-text">RPG</div>
+        <div class="arrow">▶</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script_5.js" defer></script>
 </body>
 </html>
