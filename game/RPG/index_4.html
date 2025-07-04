@@ -3,69 +3,81 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RPGゲームの紹介</title>
-    <link rel="stylesheet" href="style_4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おすすめRPG紹介 </title>
+    <link rel="stylesheet" href="css/css1.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Noto+Sans+JP:wght@300;400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <a href="index_5.html" target="_blank" rel="noopener">back</a>
-    <h1>おすすめRPGゲーム</h1>
-    <p>RPGとは？</p>
-    <ul>
-        <li></li>
-        <li></li>
-    </ul>
-    <div class="container">
-        <div class="main-contents">
-            <h2 id="1">ドラゴンクエスト</h2>
-            <div class="recommend__header">
-                <h2 class="recommend__title">おすすめポイント</h2>
+    <main id="main-content">
+        <section id="dq" class="game-section">
+            <div class="glass-card max-w-4xl mx-auto w-full scroll-reveal">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-4xl font-kiwi text-cyan-300 mb-6">ドラゴンクエスト</h2>
+                        <h3 class="text-xl font-semibold mb-3 text-black-200">おすすめポイント</h3>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li>王道のストーリーと温かみのある世界観。</li>
+                            <li>鳥山明先生による魅力的なキャラクターデザイン。</li>
+                            <li>初心者から上級者まで楽しめる絶妙な難易度。</li>
+                        </ul>
+
+                    </div>
+                    <img src="https://www.dragonquest.jp/stayhome/assets/img/wallpaper/l/DQ1.jpg" alt="[ドラゴンクエストの画像]"
+                        class="rounded-lg shadow-lg w-full h-auto">
+                    <p>このページでは、株式会社スクウェア・エニックスが権利を所有する著作物を利用しております。当該著作物の転載・配布は禁止いたします。
+                        （C）2017 ARMOR PROJECT/BIRD STUDIO/SQUARE ENIX All Rights Reserved.
+
+                    </p>
+                </div>
+
+        </section>
+
+        <!-- エルデンリング -->
+        <section id="elden" class="game-section">
+            <div class="glass-card max-w-4xl mx-auto w-full scroll-reveal">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-4xl font-kiwi text-amber-300 mb-6">エルデンリング</h2>
+                        <h3 class="text-xl font-semibold mb-3 text-black-200">おすすめポイント</h3>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li>圧倒的な達成感を得られる高難易度アクション。</li>
+                            <li>広大で美しい、探索しがいのあるオープンワールド。</li>
+                            <li>断片的に語られる謎多き重厚なストーリー。</li>
+                        </ul>
+                    </div>
+                    <img src="https://www.famitsu.com/images/000/284/429/y_63847305b07f6.jpg" alt="[エルデンリングの画像]"
+                        class="rounded-lg shadow-lg w-full h-auto">
+                </div>
             </div>
-            <ul class="recommend_list">
-                <li>親しみやすく奥深いストーリーから感じる冒険感</li>
-                <li>戦略性の高いターン性バトル</li>
-                <li>個性的なキャラクター＆名曲の数々で最後まで楽しめる！</li>
-            </ul>
+        </section>
 
-            <h2 id="2">エルデンリング</h2>
-            <ol>
-                <li>広大なワールドを自分だけのルートで楽しめる</li>
-                <li>緊張感あふれるアクションバトルで得られる達成感</li>
-                <li>深い世界観と謎解きストーリーに思わず没入する</li>
-            </ol>
-
-            <h2 id="3">龍が如く</h2>
-            <ol>
-                <li>熱量あふれる人間ドラマとシネマティック演出が見どころ</li>
-                <li>カラオケ、パチンコなど数百種類に及ぶミニゲームが遊べる</li>
-                <li>様々な武器やアクションで挑むストリートファイト系の爽快バトル</li>
-            </ol>
-        </div>
-
-        <div class="side-menu">
-            <ul>
-                <li><a href="#1">ドラゴンクエスト</a></li>
-                <li><a href="#2">エルデンリング</a></li>
-                <li><a href="#3">龍が如く</a></li>
-            </ul>
-        </div>
-    </div>
-    </section>
-    <li>
-        <p>文章</p>
-    </li>
-    <li>Raft
-        <p>文章</p>
-    </li>
-    </ol>
-
-    <main>
-
+        <!-- 龍が如く -->
+        <section id="yakuza" class="game-section">
+            <div class="glass-card max-w-4xl mx-auto w-full scroll-reveal">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-4xl font-kiwi text-red-400 mb-6">龍が如く</h2>
+                        <h3 class="text-xl font-semibold mb-3 text-black-200">おすすめポイント</h3>
+                        <ul class="list-disc list-inside space-y-2 text-lg">
+                            <li>極道の世界を描く、熱くて泣ける重厚な人間ドラマ。</li>
+                            <li>リアルに再現された日本の歓楽街での多彩な遊び。</li>
+                            <li>簡単操作で爽快感のあるド派手なケンカバトル。</li>
+                        </ul>
+                    </div>
+                    <img src="https://sns.sega.jp/sp/telework/telework-wp_ryu7_02.jpg" alt="[龍が如くの画像]"
+                        class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </section>
     </main>
-    </div>
-    </div>
-    </element>
+
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    /* スムーズスクロールを有効に */
+
 }
 
 body {
@@ -13,7 +13,6 @@ body {
     font-family: 'Kiwi Maru', serif;
 }
 
-/* 左側の目次 */
 #toc {
     position: fixed;
     top: 50%;
@@ -38,9 +37,7 @@ body {
     color: #00bcd4;
 }
 
-/* :target疑似クラスを使って、クリックされたセクションの時に何かスタイルを変えることは可能 */
-/* 例: #dq:target { border: 2px solid red; } */
-/* ただし、目次自体のハイライトはCSSだけでは困難です */
+
 #toc ul li a.active-link {
     color: #ffffff;
     transform: translateX(5px);
@@ -49,26 +46,23 @@ body {
     padding-left: 10px;
 }
 
-/* メインコンテンツエリア */
 #main-content {
     margin-left: 180px;
-    /* 目次の幅を考慮 */
+
 }
 
-/* 各ゲームセクション */
 .game-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 4rem 2rem;
-    /* 背景画像とパララックス効果 */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-/* 各セクションの背景画像を設定 */
+
 #dq {
     background-image: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('https://www.dragonquest.jp/stayhome/assets/img/wallpaper/l/35th4.jpg');
 }
@@ -82,42 +76,14 @@ body {
 }
 
 
-/* ガラス風エフェクト */
-.glass-card {
-    background: rgba(26, 32, 44, 0.7);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    padding: 2.5rem;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-
-/* スクロールアニメーション (CSS Scroll-driven Animations) */
-/* 注意: Firefoxなど一部ブラウザではまだサポートされていません */
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .scroll-reveal {
     animation: fade-in-up linear;
     animation-timeline: view();
     animation-range-start: entry 10%;
-    /* ビューポートに入り始めて10%でアニメーション開始 */
     animation-range-end: entry 40%;
-    /* 40%でアニメーション完了 */
 }
 
 
-/* レスポンシブ対応 */
 @media (max-width: 768px) {
     #toc {
         display: none;
@@ -130,11 +96,9 @@ body {
     .game-section {
         padding: 4rem 1rem;
         background-attachment: scroll;
-        /* スマホでは背景固定を解除 */
     }
 }
 
-/* 枠の背景色*/
 .recommend {
     border: 2px solid #6b5f54;
     background: #eceae6;
@@ -143,7 +107,6 @@ body {
     margin-right: 400px
 }
 
-/* 見出し */
 .recommend__header {
     display: inline-flex;
     align-items: center;
