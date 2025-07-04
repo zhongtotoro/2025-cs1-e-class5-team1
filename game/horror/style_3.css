@@ -62,3 +62,17 @@ a.button {
 .button:hover {
     background: #ff3b5c;
 }
+
+#home {
+    display: inline-block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1rem;
+    padding: .1rem 1rem;
+    background: crimson;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    float: left;
+
+}
