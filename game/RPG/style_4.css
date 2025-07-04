@@ -100,46 +100,29 @@ body {
     margin-top: 2rem;
 }
 
-.official {
-    background-color: #a19e9e;
-}
+
 
 span {
     font-size: 30px;
 }
 
 .btn-official {
-    /* ボタンの形状 */
     display: inline-block;
-    /* 他の要素と横に並びつつ、paddingやmarginが効くように */
     padding: 12px 24px;
     border-radius: 8px;
-    /* 角の丸み */
-
-    /* 色と文字 */
-    background-color: #007bff;
-    /* ボタンの背景色（例：青系） */
+    background-color: #4a52a9;
     color: #ffffff;
-    /* 文字色 */
     text-decoration: none;
-    /* 下線を消す */
-    font-weight: bold;
-    /* 文字を太く */
-    text-align: center;
 
-    /* アニメーション */
+    font-weight: bold;
+    text-align: center;
     transition: all 0.3s ease;
-    /* 変化を滑らかに */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* 薄い影 */
 }
 
-/* マウスを乗せた時のスタイル */
+
 .btn-official:hover {
-    background-color: #0056b3;
-    /* 少し濃い色に */
+    background-color: #5785aa;
     transform: translateY(-3px);
-    /* 少し上に動く */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* 影を濃くする */
 }
