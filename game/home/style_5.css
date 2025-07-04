@@ -96,7 +96,7 @@ body {
   opacity: 0.5;
 }
 
-/* 非表示クラス */
+/* 非表示 */
 .hidden {
   display: none;
 }
