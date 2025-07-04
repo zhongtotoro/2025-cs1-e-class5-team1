@@ -5,6 +5,10 @@ body{
     font-size: 15px;
 }
 
+.button{
+    text-align: right;
+}
+
 img{
     width: 150px;
     height: auto;
